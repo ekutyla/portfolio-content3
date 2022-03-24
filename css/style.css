@@ -43,6 +43,7 @@ nav a:link{
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
+    padding: 5px;
 }
 
 a:hover{
@@ -93,10 +94,10 @@ p{
 }
 
 img {
-    max-width: 300px;
+    min-width: 250px;
+    max-width: 350px;
     height: auto;
-    border: 4px solid;
-    border-color: #F2836B;
+    border: 4px solid #F2836B;
     padding: 3px;
     margin: 2px;
     border-radius: 1px;
@@ -137,7 +138,7 @@ img {
 
 form {
     border: 3px dotted #f1f1f1;
-    background-color: #4970be;
+    background-color: #01401C;
     color: white;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -170,9 +171,20 @@ input {
     box-sizing: border-box;
   }
 
+  input[type=radio] {
+    padding: 0px;
+    margin: 0px;
+    width: 20%;
+  }
+
+label[for=radio]{
+    width: 50%;
+    padding: 10px;
+}
+
 button[type=subscribe] {
-    background-color: rgb(2, 68, 2);
-    color: white;
+    background-color: #F2B05E;
+    color: black;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -181,14 +193,40 @@ button[type=subscribe] {
     text-align: center;
     margin-top: 2%;
     margin-left: 25%;
+    font-size: 1em;
   }
 
 button[type=subscribe]:hover {
     opacity: 0.8;
   }
 
+textarea{
+    width: 70%;
+    height: 25vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
 #neon_sign{
+    animation-name: birdmove;
+    animation-duration: 3s;
+    animation-delay: 2s;
     align-self: center;
+}
+
+@keyframes birdmove {
+    from {width: 250px;
+        border: 4px solid white;
+     }
+    to {width: 500px;
+        border-width: 10px;
+        border-style: inset;
+        border-color: #F2A444 #F28157 #F2A444 #F28157;
+     }
 }
 
 /* HISTORY */
@@ -210,20 +248,12 @@ button[type=subscribe]:hover {
     align-items: center;
 }
 
-.opening{
-    text-align: center;
-}
-
 .gallery{
     display: grid;
     align-items: center;
     grid-template-columns: (3 1fr);
     row-gap: 10px;
     margin-top: 50px
-    /* padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px; */
 }
 
 .gallery img{
@@ -241,7 +271,7 @@ button[type=subscribe]:hover {
     border-color: #D96CB3;
 }
 
-.gallery img:nth-child(2n):hover {
+.gallery img:nth-child(3n):hover {
     border-color: #F2836B;
 }
 
@@ -284,6 +314,7 @@ h2{
 }
 
 .opening {
+    text-align: center;
     font-size: 1.1em;
     border-bottom: 2px black dotted;
     padding-bottom: 30px;
@@ -293,19 +324,14 @@ h2{
     font-size: 1.1em;
     text-align: center;
     margin-bottom: 30px;
-
 }
-
-
-
-
-
 
 
 /* ADDITIONAL */
 
-@media screen and (prefers-reduced-motion: reduce){
-    html{
-      animation: none;
+@media (prefers-reduced-motion) {
+    #neon_sign{
+        animation: none;
+        align-self: center;
     }
 }

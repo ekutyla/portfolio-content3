@@ -11,8 +11,9 @@
         <link rel="stylesheet" href="css/html5reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link href='https://fonts.googleapis.com/css2?family=Raleway&display=swap' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/b9b5c91cc9.js" crossorigin="anonymous"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2X0KWJFZE0"></script>
+        <script src="https://kit.fontawesome.com/b9b5c91cc9.js" crossorigin="anonymous"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -65,13 +66,23 @@
                 method="POST"
             >
                 <fieldset>
-                    <legend>Joing Our Mailing List!</legend>
+                    <legend>Join Our Mailing List!</legend>
 
-                    <label for="name_id">Name</label>
+                    <label for="name_id">
+                        <i class="fa-solid fa-user"></i>
+                        Name</label>
                     <input type="text" placeholder="Type Your Name" id = "name_id" name="name" required>
 
-                    <label for="email_id">Email</label>
+                    <label for="email_id">
+                        <i class="fa-solid fa-at"></i>
+                        Email</label>
                     <input type="email" placeholder="Type Your Email" id = "email_id" name="email" required>
+
+                    <label for="request"></label>
+                    <textarea name="request" placeholder="Have a Question? Need a Recipe? Type it Here." id="request"></textarea>
+
+                    <input type="radio" name="radio" id="radio">
+                    <label for="radio">Recieve Weekly Emails</label>
 
 
                     <button type="subscribe">Subscribe</button>
@@ -82,7 +93,6 @@
         </main>
 
         <footer>
-            <i class="fa-duotone fa-island-tropical"></i>
             <p>Emilee Kutyla &copy; 2022</p>
         </footer>
 
